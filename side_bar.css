@@ -1,0 +1,38 @@
+/* side bar */
+.side-bar-toggle-button::before {
+    content: ">";
+    display: inline-block;
+    line-height: 50px;
+    width: 50px;
+    text-align: center;
+    border-right: 1px solid orange;
+}
+.side-bar-check-value:checked + .side-bar-toggle-button::before {
+    content: "<";
+}
+
+.side-bar-check-value:checked ~ .side-bar-list {
+    left : 0;
+}
+.side-bar-list {
+    position:absolute;
+    left: -100px;
+    top: 90px;
+    bottom: 0;
+    width: 100px;
+    transition: 0.3s ease-in;
+    z-index: 200;
+}
+.side-bar-link {
+    display: block;
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid orange;
+    background-color: rgba(255, 166, 0, 0.315);
+    /* z-index: 100; */
+    text-decoration: none;
+}
+.checkbox-blind {
+    position:absolute;
+    clip: rect(0, 0, 0, 0);
+}

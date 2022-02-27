@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <title>Giseong</title>
+    <link rel="icon" href="favicon.ico"> 
+    <link rel="stylesheet" href="top_nav.css">
+    <link rel="stylesheet" href="side_bar.css">
+    <link rel="stylesheet" href="home_container.css">
+    <link rel="stylesheet" href="card_format.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="entertain_format1.css">
+    <meta charset="utf-8">
+    <style>
+
+    /* bezos sticky setting */
+    .photo-card:nth-child(2) {
+        grid-row: span 2;
+        position: sticky;
+        top: 20px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function check(box) {
+            if (box.checked == true){
+                document.querySelector(".side-bar-out-background").style.backgroundColor= "rgba(" + [255, 166, 0, 0.315].join(',') +")"
+                document.querySelector(".side-bar-out-background").style.opacity="0.3"
+            } else{
+            document.querySelector(".side-bar-out-background").style.backgroundColor="transparent"
+            document.querySelector(".side-bar-out-background").style.opacity="1"
+            }
+        }
+    </script>
+
+    <top-nav class="top-nav-grid hairline-bottom">
+        <header id="side-bar">
+            <input type="checkbox" id="side-bar-button" class="side-bar-check-value checkbox-blind" onclick="check(this)">
+            <label for="side-bar-button" class="side-bar-toggle-button"></label>
+            <div class="side-bar-list side-bar-background">
+                <a href="Newton's laws of motion.html" class="side-bar-link">Newton's laws of motion</a>
+                <a href="Dream.html" class="side-bar-link">Dream</a>
+            </div>
+        </header>
+        <div class="top-nav-flex">
+            <a href="index.html">
+                <h1>I'm Giseong</h1>
+            </a>
+        </div>
+    </top-nav>
+
+    <main id="main-content"> 
+
+        <div class="home-container-grid pad-50 center-margin">
+            
+            <div class="photo-card card-inner-grid"> 
+                    <img class="face-img" src="tesla elon musk.jpg" width="400">
+                    <a href="https://www.tesla.com/" target="_blank">
+                        <img class="logo" src="tesla logo.png" width="40px">
+                    </a>
+                    <a class="name" href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank">
+                        <h4>elon musk</h4>
+                    </a>           
+            </div>
+
+            <div class="photo-card card-inner-grid"> 
+                    <img class="face-img" src="amazon jeff bezos.jpg" width="400">
+                    <a href="https://www.amazon.com/" target="_blank">
+                        <img class="logo" src="amazon logo.png" width="40px">
+                    </a>
+                    <a class="name" href="https://en.wikipedia.org/wiki/Jeff_Bezos" target="_blank">
+                        <h4>jeff bezos</h4>
+                    </a>                
+            </div>
+
+            <div class="photo-card card-inner-grid">
+                    <img class="face-img" src="tim berners lee.jpg" width="400">
+                    <a href="https://www.w3.org/People/Berners-Lee/" target="_blank">
+                        <img class="logo" src="www logo.png" width="40px">
+                    </a>
+                    <a class="name" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank">
+                        <h4>berners lee</h4> 
+                    </a>                
+            </div>
+        </div>
+
+        <div class="entertainment">
+            <img id="sungmo-img" src="sungmo 1.png" usemap="#upblank">
+
+            <map name="upblank" id="upblank">
+                <area shape="poly" coords="45, 105, 106, 60, 204, 48, 300, 60, 360, 105, 300, 160, 204, 174 106, 163" onclick="change_image1()">
+                <area shape="poly" coords="40, 538, 106, 500, 211, 470, 302, 488, 378, 542, 307, 600, 211, 615, 106, 595" onclick="change_imag2()">
+            </map>
+        </div>
+        <script>
+            function change_image1(){                
+                    document.getElementById("sungmo-img").src="sungmo 2.png";                    
+            }
+            function change_imag2(){
+                    document.getElementById("sungmo-img").src="sungmo 4.png";
+            }            
+        </script>
+        
+    </main>
+
+    <footer id="footer">
+        <div class="footer-inner-flex">
+            <a href="https://github.com/jiggyjiggy">
+                <img src="github logo.png" width="100px">
+            </a>
+        </div>
+    </footer>
+    
+</body>
+</html>

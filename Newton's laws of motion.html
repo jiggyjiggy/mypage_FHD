@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <title>Giseong</title>
+  <link rel="icon" href="favicon.ico"> 
+  <link rel="stylesheet" href="top_nav.css">
+  <link rel="stylesheet" href="side_bar.css">
+  <link rel="stylesheet" href="art.css">
+  <link rel="stylesheet" href="footer.css">
+  <meta charset="utf-8">
+
+  <style>
+    /* @media(max-height:63vh) { */
+
+    @media(max-height:500px) {
+
+        .home-container{
+            display:none;
+        }
+
+        #main-content::before{
+            content: "화면을 키워주세요";
+            font-size: 7em;
+        }
+    }
+    .main-padding {
+        padding: 0;
+    }
+    .center-margin{
+        margin: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+    <script>
+
+        function check(box) {
+            if (box.checked == true){
+                document.querySelector(".side-bar-out-background").style.backgroundColor= "rgba(" + [255, 166, 0, 0.315].join(',') +")"
+                document.querySelector(".side-bar-out-background").style.opacity="0.3"
+
+            } else{
+            document.querySelector(".side-bar-out-background").style.backgroundColor="transparent"
+            document.querySelector(".side-bar-out-background").style.opacity="1"
+            }
+        }
+
+
+        // var groundHeight = document.getElementsByClassName("tree").style.bottom;
+        // var appleHeight = document.getElementsByClassName("apple").style.bottom;
+
+        function free_fall(){
+            document.querySelector(".apple").style.animationName= "free-fall"
+        }
+        function spring_free_fall() {
+            document.querySelector(".python-logo").style.animationName= "py-spring-free-fall"
+        }
+
+        // 1. 함수 하나로 통합 가능?
+        // 2. 키프레임 속 위치에 대해 css의 value 갖고오기 가능?
+
+        // function {
+        // }
+    </script>
+
+    <top-nav class="top-nav-grid hairline-bottom">
+        <header id="side-bar">
+            <input type="checkbox" id="side-bar-button" class="side-bar-check-value checkbox-blind" onclick="check(this)">
+            <label for="side-bar-button" class="side-bar-toggle-button"></label>
+            <div class="side-bar-list side-bar-background">
+                <a href="Newton's laws of motion.html" class="side-bar-link">Newton's laws of motion</a>
+                <a href="Dream.html" class="side-bar-link">Dream</a>
+            </div>
+        </header>
+        <div class="top-nav-flex">
+            <a href="index.html">
+                <h1>I'm Giseong</h1>
+            </a>
+        </div>
+    </top-nav>
+
+    <main id="main-content" class="main-wrapper side-bar-out-background">
+        <div class="home-container main-padding center-margin">
+            <section class="art-size art-background">
+                <div class="grass"></div>
+                
+                <div class="art-wrap">
+                    <img src="tree.png" class="tree" width="400vh">
+                    <button class="apple"><img src="apple1.png" width="80vh" onclick="free_fall()"></button>
+                    <!-- <button class="python-logo"><img src="python logo.png" width="100px" onclick="spring_free_fall(this)"></button> -->
+                    <button class="python-logo-button" onclick="spring_free_fall()"></button>
+                    <img src="python logo.png" width="80vh" class="python-logo">                 
+                </div>
+            </section>
+    </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-inner-flex">
+            <a href="https://github.com/jiggyjiggy">
+                <img src="github logo.png" width="100px">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

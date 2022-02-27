@@ -1,0 +1,114 @@
+/* art */
+.art-size {
+    box-sizing: border-box;
+}
+.art-background {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(to top, transparent  80%, blue 100%);
+}
+.grass {
+    position: absolute;
+    height: 30%;
+    min-width: 100vmax;
+    background: linear-gradient(rgb(2, 90, 2) 60%,brown 100%)
+}
+
+.art-wrap{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.tree{
+    position: absolute;
+    bottom: 15vh;
+    z-index: 2;
+}
+.apple{
+    position: absolute;
+    right: 10vh;
+    bottom: 60vh;
+    z-index: 3;
+
+    animation-name: apple-ready;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.48, 0, 0.76, 0.15);
+    animation-fill-mode: both;
+    }
+button.apple {
+    background: transparent;
+    border-color: transparent;  
+    z-index: 3;  
+}
+@keyframes free-fall {
+    from {
+        bottom: 60vh;
+    }
+    to {
+        bottom: 15vh;
+    }
+}
+
+.python-logo{
+    position: absolute;
+    left: 8vh;
+    bottom: 40vh;
+    z-index: 1;
+
+    animation-name: py-ready;
+    animation-duration: 1.5s;
+    animation-direction:alternate;
+    /* animation-iteration-count:1.5; */
+    animation-fill-mode: both;
+}
+button.python-logo-button {
+    position: absolute;
+    left: 8vh;
+    bottom: 40vh;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border-color: transparent;    
+    z-index: 3;
+}
+@keyframes py-spring-free-fall {
+    0% {
+        bottom: 40vh;
+        /* transform: scale(1); */
+        animation-timing-function: cubic-bezier(0.45, 0.01, 0.91, 0.18);
+    }
+    50% {
+        transform: scale(1);
+    }
+
+    55% {
+        bottom: 15vh;
+        transform: scaleY(0.5) scaleX(1.2);
+        
+        animation-timing-function: cubic-bezier(0.35, 0.71, 0.53, 0.99);
+    }
+    60% {
+        transform: scale(1);
+    }
+    
+    82%{
+        bottom: 25vh;
+
+        animation-timing-function: cubic-bezier(0.83, 0, 1, 1); 
+    }
+    93%{
+        transform: scale(1);
+    }
+    95%{
+        bottom: 15vh;
+        transform: scaleY(0.8) scaleX(1.1);
+    }
+    100%{
+        bottom: 15vh;
+        transform: scale(1);
+    }
+}
+

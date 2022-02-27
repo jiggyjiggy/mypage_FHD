@@ -1,0 +1,22 @@
+/* top nav */
+.top-nav-grid {
+    display: grid; 
+    grid-template-rows: 70px;
+    grid-template-columns: min-content auto;
+    gap: 1.5rem;
+    padding: 0.3rem;
+    align-items: center;
+}
+
+.hairline-bottom {
+    border-bottom: 1px solid orange;
+}
+.top-nav-flex {
+    display: flex;
+}
+.menu-button {
+    display: flex;
+}
+top-nav button.align-center {
+    align-items: center;
+}

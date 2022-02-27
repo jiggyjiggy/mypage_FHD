@@ -1,0 +1,29 @@
+.home-container-grid {
+    width: auto;
+    display: grid;
+    grid-template-rows: repeat(2,500px);
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 5px;
+    column-gap: 25px;
+    max-width: 1000px;
+}
+@media(max-width:800px) {
+    .home-container-grid {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        overflow: hidden;
+    }    
+    /* .photo-card:nth-child(2) {
+        
+        우선적으로 부모 태그에 sticky구현안될조건 넣어서 했음 
+    반응형으로 바꿧을때 기존 기능 멈추기 구현
+    }       */
+}
+.pad-50 {
+    padding: 50px;
+}
+.center-margin {
+    margin-left: auto;
+    margin-right: auto;
+}

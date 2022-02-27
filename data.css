@@ -1,0 +1,45 @@
+ /* data */
+    /* 물리학 */
+    p {
+        font-weight: bold;
+        font-style: italic;
+    }
+   .physics{
+        opacity: 0;
+    }
+    .physics:active {
+        opacity: 1;
+        font-size: 20px;
+    }
+
+    /* 세상의 문제해결 */
+    .back-end-button{
+        background-color: transparent;
+        border-color: transparent;
+        width: 120px;
+        height: 30px;
+    }
+    .back-end {
+        color: transparent;
+    }
+    .back-end::after {
+        /* content: attr(title); */
+        content: "세상의 문제해결";
+        opacity: 0;
+        background-color: red;
+        color: aquamarine;
+        position: absolute;
+        left: 200px;
+        top: 90vh;
+        font-size: 15px;   
+        border-bottom-left-radius: 0.5rem;  
+        border-top-right-radius: 0.5rem; 
+        border-bottom-right-radius: 0.5rem; 
+    }
+    .back-end:hover::after {
+        opacity: 1;
+        left: 48px;
+        top: 232px;
+        transition : 5s;
+        transform: rotate(1100deg) translateY(25px) scale(1.2);
+    }
