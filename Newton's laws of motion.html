@@ -12,14 +12,21 @@
   <style>
     /* @media(max-height:63vh) { */
 
-    @media(max-height:500px) {
-
+   @media(max-height:500px) {
         .home-container{
             display:none;
         }
-
         #main-content::before{
             content: "화면을 키워주세요";
+            font-size: 7em;
+        }
+    }
+    @media(min-height:700px) {
+        .home-container{
+            display:none;
+        }
+        #main-content::before{
+            content: "화면을 줄여주세요";
             font-size: 7em;
         }
     }
